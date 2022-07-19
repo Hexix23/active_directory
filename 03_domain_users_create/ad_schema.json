@@ -1,0 +1,27 @@
+{
+    "domain": "hlx.com",
+
+    "groups": [
+        {
+            "name": "Employees"
+        }
+    ],
+    "users": [
+        {
+            "name": "Javier Garzon",
+            "password": "P@ssword1234",
+            "groups": [
+                "Employees"
+            ]
+
+        },
+        {
+            "name": "Carlos Clos",
+            "password": "P@sswordNBA",
+            "groups": [
+                "Employees"
+            ]
+
+        }
+    ]
+}
