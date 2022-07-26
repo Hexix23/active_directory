@@ -1,6 +1,12 @@
 # 03 Create User of the Domain
 
 1. Crear json con la estructura del proporcionado en el repo ( o copiarlo directamente jeje)
+```shell
+Start-Service WinRM
+```
+```shell
+Set-Item WSMan:\localhost\Client\TrustedHosts -value 192.168.153.130
+```
 2. Nos conectamos al dc desde la wk mediante la powershell
 ```shell
 $dc = New-PSSession <IP-DC> -Credential (Get-Credential)
