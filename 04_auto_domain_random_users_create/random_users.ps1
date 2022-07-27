@@ -33,13 +33,13 @@ if ( $LocalAdminCount -ne 0){
     }
 }
 
-for ( $i = 0; $i -lt $num_groups; $i++){
+for ( $i = 0; $i -lt $GroupCount; $i++){
     $new_group = (Get-Random -InputObject $groups_names)
     $groups += @{ "name" = "$new_group" }
     $groups_names.Remove($new_group)
 }
 
-for ( $i = 0; $i -lt $num_users; $i++){
+for ( $i = 0; $i -lt $UserCount; $i++){
     $first_name = (Get-Random -InputObject $first_names)
     $last_name = (Get-Random -InputObject $last_names)
     $password = (Get-Random -InputObject $passwords)
