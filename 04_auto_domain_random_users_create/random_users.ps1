@@ -43,11 +43,18 @@ for ( $i = 0; $i -lt $UserCount; $i++){
     $first_name = (Get-Random -InputObject $first_names)
     $last_name = (Get-Random -InputObject $last_names)
     $password = (Get-Random -InputObject $passwords)
+    
     $new_user = @{ `
         "name"="$first_name $last_name"
         "password"="$password"
         "groups"= @( (Get-Random -InputObject $groups).name ) `
     }
+
+    if ( $local_admin_indexes | Where { $_ -eq $i  } ){
+        echo "user $i is local admin"
+        $new_user["local_admin"] = $true
+    }
+
     $users += $new_user
     $first_names.Remove($first_name)
     $last_names.Remove($last_name)

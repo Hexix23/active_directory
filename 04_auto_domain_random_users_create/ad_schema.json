@@ -1,0 +1,37 @@
+{
+    "domain": "hlx.com",
+
+    "groups" : [
+        {
+            "name": "Employees"
+        }
+    ],
+
+    "users": [
+
+        {
+            "local_admin": ["ws01"],
+            "name": "Alice Lice",
+            "password":"bubbles",
+            "groups": [
+                "Employees"
+            ]
+        },
+        {
+            "local_admin": ["ws02"],
+            "name": "Bob Ob",
+            "password":"ashley",
+            "groups": [
+                "Employees"
+            ]
+        },
+        {
+            "local_admin": ["ws01", "ws02", "dc1"],
+            "name": "Charlie Harlie",
+            "password":"P@ssw0rdABC",
+            "groups": [
+                "Employees"
+            ]
+        }
+    ]
+}
